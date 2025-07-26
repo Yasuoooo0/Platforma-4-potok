@@ -9,7 +9,7 @@ main {
   color: var(--black);
   font-family: "Inter";
   font-size: var(--font-size);
-  font-weight: 200;
+  font-weight: 300;
 }
 main * {
   letter-spacing: var(--letter_spacing);

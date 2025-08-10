@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Защита паролем только для указанных страниц
-    const validPasswords = ["secret123", "admin2024", "мойпароль"];
+    const validPasswords = ["6modul25"];
     const overlay = document.getElementById('passwordOverlay');
     const passwordInput = document.getElementById('passwordInput');
     const submitBtn = document.getElementById('submitPassword');
@@ -68,4 +68,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         passwordInput.focus();
     }
+
 });

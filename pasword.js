@@ -16,14 +16,21 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
 
-    // Защита паролем только для указанных страниц
-    const validPasswords = ["6modul25"];
+    // Пароли для разных страниц
+    const passwords = {
+        'modul_6.html': '6modul25',
+        'modul_7.html': '7modul25'
+    };
+
     const overlay = document.getElementById('passwordOverlay');
     const passwordInput = document.getElementById('passwordInput');
     const submitBtn = document.getElementById('submitPassword');
     const errorText = document.getElementById('errorText');
     const body = document.body;
     const mainContent = document.querySelector('.main');
+
+    // Определяем текущую страницу
+    const currentPage = window.location.pathname.split('/').pop();
 
     // Проверка сохраненного пароля
     if (sessionStorage.getItem('unlocked')) {
@@ -34,8 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Обработчик проверки пароля
     function checkPassword() {
         const password = passwordInput.value.trim();
+        const correctPassword = passwords[currentPage];
         
-        if (validPasswords.includes(password)) {
+        if (password === correctPassword) {
             sessionStorage.setItem('unlocked', 'true');
             unlockContent();
         } else {

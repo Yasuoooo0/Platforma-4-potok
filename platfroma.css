@@ -374,15 +374,7 @@ body {
   display: none;
 }
 
-.block_moduls_ul a:last-child {
-  /* Визуальные стили неактивной кнопки */
-  opacity: 0.6; /* Полупрозрачность */
-  color: #666666; /* Серый текст */
-  cursor: not-allowed; /* Курсор "недоступно" */
 
-  /* Отключаем клики */
-  pointer-events: none;
-}
 
 
 
